@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Rumah</title>
+    <!-- Include AR.js library -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <a-scene embedded arjs="sourceType: webcam;">
+        <!-- Load 3D model of the house -->
+        <a-entity gltf-model="url(path/to/your/model.glb)" scale="0.1 0.1 0.1" position="0 0 -5"></a-entity>
+        
+        <!-- Add AR text for your name and NPM -->
+        <a-text value="Your Name (NPM)" position="0 1 -3" color="black" align="center"></a-text>
+
+        <!-- Add AR text for explanation of each object -->
+        <a-text value="Penjelasan Objek 1" position="3 2 -6" color="black" align="center"></a-text>
+        <a-text value="Penjelasan Objek 2" position="-3 2 -6" color="black" align="center"></a-text>
+        <!-- Add more texts for other objects -->
+    </a-scene>
+</body>
+</html>
